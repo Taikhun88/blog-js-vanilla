@@ -1,0 +1,35 @@
+@use 'variables';
+@use 'reset';
+@use 'classes';
+@use 'media-queries' as *;
+@use 'utils';
+@use 'base';
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid: 
+        "header" auto
+        "content" 1fr
+        "footer" auto / 
+        auto;
+}
+
+header {
+    grid-area: header;
+    background: green;
+    padding: 20px;
+}
+
+.content {
+    grid-area: content;
+    // background-color: red;
+    padding: 20px;
+}
+
+footer {
+    color: white;
+    grid-area: footer;
+    // background: #333;
+    padding: 20px;
+}
