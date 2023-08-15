@@ -21,8 +21,9 @@ form.addEventListener('submit', async event => {
                     'Content-Type': "application/json",
                 }
             });
-            const body = await response.json();
-            console.log(body);
+            // const body = await response.json();
+            // console.log(body);
+            window.location.href = "index.html";
         } catch (e) {
             console.log('e :', e);
         }

@@ -43,7 +43,10 @@ const createArticles = (articles) => {
 const fetchArticle = async () => {
     try {
         const response = await fetch("https://restapi.fr/api/article");
-        const articles = await response.json();
+        let articles = await response.json();
+        if (!Array.isArray(articles)) {
+            articles = [articles]; // intègre l'objet dans un tableau d'un élément
+        }
 
         createArticles(articles)
         console.log(articles);
