@@ -1,3 +1,5 @@
+@import './assets/styles/media-queries';
+
 .content {
     background-color: var(--divider);
     display: flex;
@@ -10,6 +12,9 @@
         .article {
             background-color: white;
             padding: 0 5rem;
+            @include xs {
+                padding: 0 2rem;
+            }
             border-radius: 1rem;
             box-shadow: var(--box-shadow);
             display: flex;
