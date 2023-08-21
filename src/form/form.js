@@ -38,7 +38,7 @@ const initForm = async () => {
 initForm();
 
 btnCancel.addEventListener('click', async () => {
-    const result = openModal('Si vous quittez la page, vous allez perdre votre article');
+    const result = await openModal('Si vous quittez la page, vous allez perdre votre article');
     if (result) {
         location.assign('/index.html');
     }
